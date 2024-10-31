@@ -55,7 +55,7 @@ After applying power to the Pico2 the script creates an instance of the class my
 This class is used to store and retrieve values to and from variables defined in the class.
 It is my way to try to minimize the use of global variables.
 From this my_glbls class various variables used in the script are set.
-The script creates instances of:
+The script creates object instances of:
 
 ```
 Instance name:  Class:         File:
