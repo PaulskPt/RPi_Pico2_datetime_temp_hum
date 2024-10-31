@@ -1,6 +1,6 @@
 """
   main.py
-  2024-10-30 11h00 PT  by @Paulskpt
+  2024-10-30 11h00 utc  by @Paulskpt
   Micropython test script for a Raspberry Pi Pico 2 (RP2350)
 """
 from pimoroni_i2c import PimoroniI2C # builtin in Pimoroni's micropython
