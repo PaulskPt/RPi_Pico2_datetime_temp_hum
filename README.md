@@ -6,7 +6,7 @@ by @PaulskPt (Github) 2024
 License: MIT
 
 This is a project to show datetime, temperature and humidity values on an OLED display.
-The script runs on a Raspberry Pi Pico 2.
+The Micropython script runs on a Raspberry Pi Pico 2.
 
 Firmware:
 Pimoroni-pico-rp2350 [repo](https://github.com/pimoroni/pimoroni-pico-rp2350)
