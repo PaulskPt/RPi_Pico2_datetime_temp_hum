@@ -46,7 +46,6 @@ Hardware:
 	
 	
 This micropython script is a port from another script I created in 2021.
-The script is now running on a Raspberry Pi Pico 2 (RP2035)
 
 What the script does:
 
