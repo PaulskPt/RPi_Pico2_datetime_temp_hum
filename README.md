@@ -128,7 +128,7 @@ Update: 2024-10-31:
 
 Added option to blink the built-in LED. Default is ON.
 To make this possible changes were made in main.py and in common_psk.py.
-The built-in Led will blink at the moment, in main(), when disp_temp() is called.
+The built-in LED will blink at the moment, in main(), when disp_tmp_hum() is called.
 
 
 Note about script crash:
