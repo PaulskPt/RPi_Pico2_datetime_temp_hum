@@ -214,6 +214,8 @@ def main():
         try:
             if lStart:
                 if not ck_start_time():
+                    """ If the rtc is not set or year < 2024 you have to set
+                        the datetime values in the line below the next line."""
                     #                     ss,mm, hh,wD, dd, mo,   yy
                     result = rtc.set_time(0, 24, 19, 2, 30, 10, 2024)
                     print("Result of setting rtc: {}".format(result), end='\n')
