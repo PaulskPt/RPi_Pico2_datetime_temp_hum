@@ -31,6 +31,7 @@ The font is a global font collection downloaded from ```Google Fonts```:
 [font](https://fonts.google.com/noto/specimen/Noto+Sans).
 
 Hardware:
+
   a Raspberry Pi Pico 2 [info](https://www.raspberrypi.com/products/raspberry-pi-pico-2/) stacked onto a Pimoroni Pico Breakout Garden base.
   [info](https://shop.pimoroni.com/products/pico-breakout-garden-base?variant=32369509892179)
   
