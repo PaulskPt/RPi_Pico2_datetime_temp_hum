@@ -112,7 +112,7 @@ and the function to retrieve this list:
 Because the realtime clock board has a backup battery, 
 the datetime set will not be lost. The rtc will continue to update the 
 datetime when the Raspberry Pi Pico 2 is not powered.
-During the loop the date values are only displayed/refreshed at startup
+During the loop in main(), the date values are only displayed/refreshed at startup
 and when the date has changed. This makes the appearance of the display
 less nervous.
 
