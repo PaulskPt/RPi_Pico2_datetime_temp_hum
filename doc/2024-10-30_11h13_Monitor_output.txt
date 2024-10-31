@@ -1,0 +1,32 @@
+2024-10-30 11h13 utc
+
+board: Raspberry Pi Pico 2
+
+mounted on top of a Pimoroni Breakout Garden base board (with 2 x SPI sockets and 4 x I2C sockets).
+Other hardware connected to the Breakout Garden base board:
+- Adafruit AHT20 temperature and humidity sensor, connected via breakout garden adapter with qwiic connector;
+- Pimoroni Breakout Garden RV3028 RTC board;
+- Pimoroni Breakout Garden 1.12 inch OLED SPI board.
+
+IDE: Thonny v 181:32
+
+Shell (= Serial Monitor output):
+
+
+>>> %Run -c $EDITOR_CONTENT
+use_AHT20 = True
+AHT20 and OLED: initializing...
+use_AHT20 is set to: True
+Temperature: 25.21°C
+Humidity:    51.79 %rH
+Result of setting rtc: True
+
+Wednesday 2024-10-30, 11:13:03
+Temp: 25.23 °C
+Hum: 51.74 %rH
+
+Wednesday 2024-10-30, 11:13:11
+Temp: 25.22 °C
+Hum: 51.69 %rH
+
+Wednesday 2024-10-30, 11:13:19
