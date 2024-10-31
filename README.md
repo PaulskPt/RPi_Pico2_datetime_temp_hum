@@ -132,6 +132,10 @@ When the oscilloscope was switched off, and the oscilloscope probes were still c
 line 67, in Status, with error: OSError: [Errno 5] EIO. 
 When I removed the BG extender board with the connected probes the script executed without error.
 
+IDE:
+
+To create, test and upload the script and the other python files to the Pico2, I made use of the IDE: Thonny, version 174:29.
+
 Docs: 
 
 Serial Monitor (Shell in Thonny) output files are in the folder "docs".
