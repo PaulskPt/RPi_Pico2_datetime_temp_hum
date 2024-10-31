@@ -1,0 +1,26 @@
+Thonny v 174:29 Shell output:
+
+>>> %Run -c $EDITOR_CONTENT
+use_AHT20 = True
+AHT20, RV3028 and OLED: initializing...
+Displaying title
+use_AHT20 is set to: True
+Temperature: 25.67°C
+Humidity:    55.76 %rH
+ck_start_time(): we will use rtc datetime for start
+
+Thursday 2024-10-31, 12:03:32
+Temp: 25.65 °C
+Hum: 55.74 %rH
+
+Thursday 2024-10-31, 12:03:34
+Temp: 25.67 °C
+Hum: 55.75 %rH
+
+Thursday 2024-10-31, 12:03:35
+Temp: 25.68 °C
+Hum: 55.75 %rH
+
+Thursday 2024-10-31, 12:03:36
+Temp: 25.67 °C
+Hum: 55.72 %rH
