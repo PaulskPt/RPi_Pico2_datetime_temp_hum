@@ -75,7 +75,7 @@ Next the rtc is set for a 24hour clock and set "rtc.enable_periodic_update_inter
 Next the function main() takes control. With an interval of 1 second 
 the values of datetime, temperature and humidity are printed to the Shell and are 
 shown on the display.
-Loop() calls the function disp_time().
+main() calls the function disp_time().
 This function first reads the datetime from the realtime clock. It compares the datetime
 values with those saved before in the my_glbls class (file: common_psk.py).
 If the values for date differ, the date will be shown on the display.
