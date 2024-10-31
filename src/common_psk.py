@@ -30,7 +30,7 @@ class my_glbls(object):
         self.name = name  # Just a dummy because needed at least one parameter for __init__() (besides self)
         self._glbls = {0: False, 1: True, 2: False, 3: 56, 4:False}  # 56 dec = 0x38 hex
         self._oled =  {0:self._dc, 1:self._cs, 2:self._sck, 3:self._mosi, 4:self._rst,5:self._width,6:self._height,7:self._rotation,8:self._external_vcc}
-        self._dto =   {0:2024,1:10,2:31,3:3,4:2,5:27,6:0} # odt = old datetime
+        self._dto =   {0:2024,1:10,2:31,3:3,4:2,5:27,6:0} # dto = datetime old
         #                 0         1          2            3           4         5           6
         self._dow_lst = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
         
