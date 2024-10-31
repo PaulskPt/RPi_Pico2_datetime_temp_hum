@@ -52,7 +52,7 @@ What the script does:
 After applying power the script create an instance of the class my_glbls (in common_psk.py).
 This class is used to store and retrieve values to and from variables defined in the class.
 It is my way to try to minimize the use of global variables.
-From this my_glbls class varios variables are set.
+From this my_glbls class varios variables used in the script are set.
 The script creates instances of:
 
 ```
