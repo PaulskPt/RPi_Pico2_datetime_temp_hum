@@ -1,39 +1,7 @@
 """
-  aht_rtc_oled_test.py
+  main.py
   2024-10-30 11h00 PT  by @Paulskpt
   Micropython test script for a Raspberry Pi Pico 2 (RP2350)
-
-  Hardware:
-  a RPi Pico 2 stacked on a Pimoroni Pico Breakout Garden base.
-  (https://shop.pimoroni.com/products/pico-breakout-garden-base?variant=32369509892179)
-  The base also containing:
-  - a Pimoroni BG 1.12in OLED 128x128 SPI LCD;
-    (https://shop.pimoroni.com/products/1-12-oled-breakout?variant=29421050757203)
-  - an Adafruit AHT20 sensor (https://www.adafruit.com/product/4566)
-    via Qwiic connector and wire connected to a Pimoroni BG adapter:
-    (https://shop.pimoroni.com/products/breakout-garden-to-qwiic-adaptor?variant=39308382339155)
-  - a Pimoroni BG RV3028 RTC board
-    (https://shop.pimoroni.com/products/rv3028-real-time-clock-rtc-breakout?variant=27926940549203)
-  
-  The driver for the AHT20 I encountered on Github: https://github.com/etno712/aht.
-
-  However the creator used a strange way to update the temperature and humidity.
-  He created a class "property": sensor.is_ready. This property calls the class function self._measure().
-  
-  For readability and intiutively understand I renamed the property to "update" instead of "is_ready".
-  Secondly I changed this property into a function, as is commonly used in other libraries.
-  To trigger the AHT20 sensor to calculate the sensor data, we now call: aht20.update().
-  I made these changes in the file: aht.py.
-  
-  NOTE:
-  I had the two oscilloscope probes connected to a Breakout Garden adapter with pins
-  (one from the "Pimoroni Breakout Garden Extender Kit" (3 pairs):
-  https://shop.pimoroni.com/en-us/products/breakout-garden-extender-kit).
-  When the oscilloscope was OFF,
-  and the oscilloscope probes were still connected to an I2C breakout socket (nr 2), this script crashed in file: "aht.py",
-  line 67, in Status, with error: OSError: [Errno 5] EIO. When I took out the adapter with the connected probes the script
-  ran without error.
-  
 """
 from pimoroni_i2c import PimoroniI2C # builtin in Pimoroni's micropython
 from breakout_rtc import BreakoutRTC # idem
