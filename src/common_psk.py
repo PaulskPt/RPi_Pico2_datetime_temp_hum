@@ -8,6 +8,7 @@ class my_glbls(object):
     _BITS_DEBUG = 2
     _AHT20_ADS = 3
     _GLBLS_DEBUG = 4
+    _USE_LED = 5
 
     _dc = 16
     _cs = 17  # for BG SPI socket A (front). GP22 for socket B
@@ -19,7 +20,7 @@ class my_glbls(object):
     _rotation = 270
     _external_vcc = False
     
-    _keys = {0:"MY_DEBUG", 1:"USE_AHT20", 2:"BITS_DEBUG", 3:"AHT20_ADS", 4:"GLBLS_DEBUG"}
+    _keys = {0:"MY_DEBUG", 1:"USE_AHT20", 2:"BITS_DEBUG", 3:"AHT20_ADS", 4:"GLBLS_DEBUG", 5:"USE_LED"}
     _okeys = {"DC": 0, "CS":1, "SCK":2, "MOSI":3, "RST":4,"WIDTH":5,"HEIGHT":6,"ROTATION":7,"EXTERNAL_VCC":8}
     _okeys2 = {0:"DC", 1:"CS", 2:"SCK", 3:"MOSI", 4:"RST",5:"WIDTH",6:"HEIGHT",7:"ROTATION",8:"EXTERNAL_VCC"}
     _dtkeys = {0:"YY", 1:"MO", 2:"DD", 3:"WD", 4:"HH", 5:"MM", 6:"SS"}
@@ -28,7 +29,7 @@ class my_glbls(object):
         self.TAG = "my_glbls."
         TAG2 = '__init__() '
         self.name = name  # Just a dummy because needed at least one parameter for __init__() (besides self)
-        self._glbls = {0: False, 1: True, 2: False, 3: 56, 4:False}  # 56 dec = 0x38 hex
+        self._glbls = {0: False, 1: True, 2: False, 3: 56, 4:False, 5:True}  # 56 dec = 0x38 hex
         self._oled =  {0:self._dc, 1:self._cs, 2:self._sck, 3:self._mosi, 4:self._rst,5:self._width,6:self._height,7:self._rotation,8:self._external_vcc}
         self._dto =   {0:2024,1:10,2:31,3:3,4:2,5:27,6:0} # dto = datetime old
         #                 0         1          2            3           4         5           6
@@ -49,7 +50,10 @@ class my_glbls(object):
         return self._glbls[self._USE_AHT20]
     
     def is_bits_debug(self):
-         return self._glbls[self._BITS_DEBUG]  
+         return self._glbls[self._BITS_DEBUG]
+    
+    def is_use_LED(self):
+        return self._glbls[self._USE_LED]
         
     def AHT20_ads(self):
         return self._glbls[self._AHT20_ADS]

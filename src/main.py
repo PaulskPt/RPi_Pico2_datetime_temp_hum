@@ -2,6 +2,7 @@
   main.py
   2024-10-30 11h00 utc  by @Paulskpt
   Micropython test script for a Raspberry Pi Pico 2 (RP2350)
+  
 """
 from pimoroni_i2c import PimoroniI2C # builtin in Pimoroni's micropython
 from breakout_rtc import BreakoutRTC # idem
@@ -15,6 +16,7 @@ from common_psk import my_glbls as myglbls
 mg = myglbls("dummy") # create an instance of the class object
 my_debug = mg.is_my_debug()
 use_AHT20 = mg.is_use_AHT20()
+use_LED = mg.is_use_LED()
 
 print("use_AHT20 = ", end="")
 print(use_AHT20)
@@ -25,6 +27,12 @@ if my_debug:
 
 if use_AHT20:
     from aht import AHT2x
+
+if use_LED:
+    led = Pin("LED", Pin.OUT)
+    led.off()
+else:
+    led = None
 
 #PINS_BREAKOUT_GARDEN = {"sda": 4, "scl": 5}  # i2c pins 4, 5 for Breakout Garden
 PINS_PICO_2 = {"sda": 4, "scl": 5}
@@ -198,7 +206,7 @@ def disp_tmp_hum():
     OLED.show()
 
 def main():
-    global lStart
+    global lStart, led
     #test_glyphs()
     delay = 1
     current_t = 0
@@ -212,8 +220,14 @@ def main():
             disp_time()
             lStart = False
             if use_AHT20:
+                if use_LED:
+                    led.on()
                 disp_tmp_hum()
+                if use_LED:
+                    led.off()
         except KeyboardInterrupt:
+            if use_LED:
+                led.off()
             raise SystemExit
         except Exception as e:
             print("Error occurred: {}".format(e), end='\n')
