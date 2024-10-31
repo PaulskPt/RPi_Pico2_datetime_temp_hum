@@ -127,8 +127,8 @@ However the euro character is not used in this script.
 Update: 2024-10-31:
 
 Added option to blink the built-in LED. Default is ON.
-To make this possible changes were added in main.py and in common_psk.py.
-The built-in Led will blink at the moment, in main() when disp_temp() is called.
+To make this possible changes were made in main.py and in common_psk.py.
+The built-in Led will blink at the moment, in main(), when disp_temp() is called.
 
 
 Note about script crash:
