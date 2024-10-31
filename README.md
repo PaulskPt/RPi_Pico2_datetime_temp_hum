@@ -68,7 +68,7 @@ aht20           AHT2x          aht.py
 Next the scipt calls disp_title() to put an intro text onto the display.
 The script then gets values from the AHT20 sensor by calling aht20.update()
 and setting variables: temperature and humidity, then print the values to the
-Shell (or Serial Monitor) and shows them on the display.
+Shell (or Serial Monitor) and show them on the display.
 Next the rtc is set for a 24hour clock and set "rtc.enable_periodic_update_interrupt".
 Next the function main() takes control. With an interval of 1 second 
 the values of datetime, temperature and humidity are printed to the Shell and are 
