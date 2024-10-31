@@ -124,6 +124,12 @@ The script sets a degrees character, variable name "degs", defined as: chr(176) 
 The script also sets an Euro character, variable name "euro", defined as: chr(8364) (0x20AC).
 However the euro character is not used in this script.
 
+Update: 2024-10-31:
+
+Added option to blink the built-in LED. Default is ON.
+To make this possible changes were added in main.py and in common_psk.py.
+The built-in Led will blink at the moment, in main() when disp_temp() is called.
+
 
 Note about script crash:
 
